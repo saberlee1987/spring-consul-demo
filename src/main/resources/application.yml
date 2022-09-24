@@ -21,6 +21,7 @@ server:
 #    password: AdminSaber66
 
 
+
 springdoc:
   swagger-ui:
     display-operation-id: true
