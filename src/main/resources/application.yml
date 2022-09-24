@@ -1,0 +1,47 @@
+server:
+  port: 9200
+  max-http-header-size: 756000
+  jetty:
+    threads:
+      min: 100
+      max: 3000
+      idle-timeout: 10000
+    connection-idle-timeout: 10000
+    accesslog:
+      enabled: true
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+
+#service:
+#  api:
+#    username: saber66
+#    password: AdminSaber66
+
+
+springdoc:
+  swagger-ui:
+    display-operation-id: true
+    display-request-duration: true
+    path: /swagger-ui.html
+
+  api-docs:
+    path: /spring-consul-demo/v3/api-docs
+    enabled: true
+
+
+
+management:
+  endpoint:
+    refresh:
+      enabled: true
+    restart:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /actuators/${spring.application.name}
